@@ -1,0 +1,139 @@
+/* --- 1. Общие настройки страницы --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif; 
+    color: #fdfaf0; 
+    overflow: hidden; 
+    line-height: 1.6;
+}
+
+/* --- 2. Настройка фона с затемнением --- */
+.main-screen {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* Усиленное затемнение для лучшего фокуса на форме */
+    background: 
+        linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), 
+        url('book.jpg');
+    
+    background-size: cover;
+    background-position: center;
+}
+
+/* --- 3. Карточка с эффектом размытия (Glassmorphism) --- */
+.glass-card {
+    background: rgba(255, 255, 255, 0.07); /* Чуть прозрачнее для глубины */
+    backdrop-filter: blur(15px);          
+    -webkit-backdrop-filter: blur(15px);   
+    
+    padding: 50px 60px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 0.15); 
+    text-align: center;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    max-width: 500px; /* Ограничили ширину для красоты */
+    width: 90%;
+}
+
+/* --- 4. Типографика --- */
+.title {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: #ffffff; /* Чистый белый для контраста */
+}
+
+.subtitle {
+    font-size: 1rem;
+    margin-bottom: 35px;
+    font-style: italic;
+    color: rgba(253, 250, 240, 0.8);
+}
+
+/* --- 5. Форма и поля ввода --- */
+.auth-form {
+    display: flex;
+    flex-direction: column;
+    gap: 18px; 
+    margin-bottom: 25px;
+}
+
+.auth-form input {
+    width: 100%;
+    padding: 14px 20px; /* Увеличены отступы внутри полей */
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    color: #fff;
+    font-family: inherit;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.auth-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.auth-form input:focus {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #a67c52;
+    box-shadow: 0 0 15px rgba(166, 124, 82, 0.3);
+}
+
+/* --- 6. Кнопка --- */
+.btn-primary {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    background-color: #8c6239; 
+    color: white;
+    text-decoration: none;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #a67c52;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* --- 7. Футер формы --- */
+.form-footer {
+    font-size: 0.95rem;
+    color: rgba(253, 250, 240, 0.7);
+}
+
+.form-footer a {
+    color: #fdfaf0;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 1px solid #8c6239;
+    transition: 0.3s;
+}
+
+.form-footer a:hover {
+    color: #a67c52;
+    border-bottom-color: transparent;
+}
